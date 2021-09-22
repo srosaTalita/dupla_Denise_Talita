@@ -25,11 +25,11 @@ public class CadastroDev {
     }
 
     static void escolha_menu(){
-        int op = entrada_numero("Digite uma opção do menu: ");
+        int op = valida_escolha(entrada_numero("Digite uma opção do menu: "),3);
 
-        while (op < 1 || op > 3) {
-            op = entrada_numero("Opção inválida. Digite novamente: ");
-        }
+//        while (op < 1 || op > 3) {
+//            op = entrada_numero("Opção inválida. Digite novamente: ");
+//        }
 
         switch (op){
             case 1: cadastro_dev();
@@ -79,11 +79,11 @@ public class CadastroDev {
         System.out.println("\t 1 - Front-end");
         System.out.println("\t 2 - Back-end");
         System.out.println("\t 3 - Mobile");
-        int op = entrada_numero("Digite a descricão da linguagem: ");
+        int op = valida_escolha(entrada_numero("Digite a descricão da linguagem: "),3);
 
-        while (op < 1 || op > 3) {
-            op = entrada_numero("Opção inválida. Digite novamente: ");
-        }
+//        while (op < 1 || op > 3) {
+//            op = entrada_numero("Opção inválida. Digite novamente: ");
+//        }
 
         switch (op){
             case 1:
@@ -133,6 +133,14 @@ public class CadastroDev {
 
     static void saida_numerica(String mensagem, String info){
         System.out.printf("%s: %s", mensagem, info);
+    }
+
+    static int valida_escolha(int menu, int limite){
+        while(menu <= 0 || menu > limite){
+            System.out.print("Opção inválida. Digite novamente: ");
+            menu = sc.nextInt();
+        }
+        return menu;
     }
 
 }
