@@ -27,10 +27,6 @@ public class CadastroDev {
     static void escolha_menu(){
         int op = valida_escolha(entrada_numero("Digite uma opção do menu: "),3);
 
-//        while (op < 1 || op > 3) {
-//            op = entrada_numero("Opção inválida. Digite novamente: ");
-//        }
-
         switch (op){
             case 1: cadastro_dev();
                 break;
@@ -52,10 +48,6 @@ public class CadastroDev {
                         "NOME COMPLETO: %s %s;\n" +
                         "SENIORIDADE: %s\n" +
                         "IDADE: %d", nome, sobrenome, senioridade, idade);
-//        saida("O cadastro foi realizado com sucesso!\n" +
-//                "NOME COMPLETO: %s %s;\n" +
-//                "NOME COMPLETO: %s %s;\n" +
-//                "IDADE: %d", nome, sobrenome, senioridade, idade);
     }
 
     static void cadastro_linguagem(){
@@ -66,11 +58,6 @@ public class CadastroDev {
                 "LINGUAGEM: %s\n" +
                 "DESCRIÇÃO: %s\n" +
                 "APLICAÇÃO: %s", nome, descricao, aplicacao);
-
-//        saida("Cadastro realizado com sucesso!\n" +
-//                "LINGUAGEM: %s\n" +
-//                "DESCRIÇÃO: %s\n" +
-//                "APLICAÇÃO: %s", nome, descricao, aplicacao);
     }
 
     static String menu_aplicacao(){
@@ -80,10 +67,6 @@ public class CadastroDev {
         System.out.println("\t 2 - Back-end");
         System.out.println("\t 3 - Mobile");
         int op = valida_escolha(entrada_numero("Digite a descricão da linguagem: "),3);
-
-//        while (op < 1 || op > 3) {
-//            op = entrada_numero("Opção inválida. Digite novamente: ");
-//        }
 
         switch (op){
             case 1:
